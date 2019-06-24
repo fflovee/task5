@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!--主布局-->
+    <definition name="baseTemplate" template="/WEB-INF/jsp/template/template.jsp">
+        <put-attribute name="header" value="/WEB-INF/header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/footer.jsp"/>
+    </definition>
+
+    <!--项目-->
+    <!--优秀学员-->
+    <definition name="excellence" extends="baseTemplate">
+        <put-attribute name="head" value="/WEB-INF/head_ex.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/body/excellence.jsp"/>
+    </definition>
+
+    <!--职业-->
+    <definition name="job" extends="baseTemplate">
+        <put-attribute name="head" value="/WEB-INF/head_job.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/body/job.jsp"/>
+    </definition>
+
+    <!--三页面布局-->
+    <definition name="recommendTemplate" template="/WEB-INF/jsp/template/recommend.jsp">
+        <put-attribute name="header" value="/WEB-INF/header.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/menu.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/footer.jsp"/>
+    </definition>
+
+    <definition name="company" extends="recommendTemplate">
+        <put-attribute name="head" value="/WEB-INF/head_re.jsp"/>
+        <put-attribute name="body1" value="/WEB-INF/jsp/body/company.jsp"/>
+    </definition>
+
+</tiles-definitions>
