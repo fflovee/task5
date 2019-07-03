@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jnshu.dao.JobMapper">
+  <resultMap id="BaseResultMap" type="com.jnshu.pojo.Job">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="direction" jdbcType="VARCHAR" property="direction" />
+    <result column="job_name" jdbcType="VARCHAR" property="jobName" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="introduction" jdbcType="VARCHAR" property="introduction" />
+    <result column="threshold" jdbcType="TINYINT" property="threshold" />
+    <result column="difficult" jdbcType="TINYINT" property="difficult" />
+    <result column="growth" jdbcType="BIGINT" property="growth" />
+    <result column="demand" jdbcType="BIGINT" property="demand" />
+    <result column="pay_one" jdbcType="VARCHAR" property="payOne" />
+    <result column="pay_sec" jdbcType="VARCHAR" property="paySec" />
+    <result column="pay_thr" jdbcType="VARCHAR" property="payThr" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="create_at" jdbcType="BIGINT" property="createAt" />
+    <result column="update_at" jdbcType="BIGINT" property="updateAt" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, direction, job_name, description, introduction, threshold, difficult, growth, 
+    demand, pay_one, pay_sec, pay_thr, image, create_at, update_at
+  </sql>
+  <select id="selectByExample" parameterType="com.jnshu.pojo.JobExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from job
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from job
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from job
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.jnshu.pojo.Job">
+    insert into job (id, direction, job_name, 
+      description, introduction, threshold, 
+      difficult, growth, demand, 
+      pay_one, pay_sec, pay_thr, 
+      image, create_at, update_at
+      )
+    values (#{id,jdbcType=INTEGER}, #{direction,jdbcType=VARCHAR}, #{jobName,jdbcType=VARCHAR}, 
+      #{description,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}, #{threshold,jdbcType=TINYINT}, 
+      #{difficult,jdbcType=TINYINT}, #{growth,jdbcType=BIGINT}, #{demand,jdbcType=BIGINT}, 
+      #{payOne,jdbcType=VARCHAR}, #{paySec,jdbcType=VARCHAR}, #{payThr,jdbcType=VARCHAR}, 
+      #{image,jdbcType=VARCHAR}, #{createAt,jdbcType=BIGINT}, #{updateAt,jdbcType=BIGINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.jnshu.pojo.Job">
+    insert into job
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="direction != null">
+        direction,
+      </if>
+      <if test="jobName != null">
+        job_name,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="introduction != null">
+        introduction,
+      </if>
+      <if test="threshold != null">
+        threshold,
+      </if>
+      <if test="difficult != null">
+        difficult,
+      </if>
+      <if test="growth != null">
+        growth,
+      </if>
+      <if test="demand != null">
+        demand,
+      </if>
+      <if test="payOne != null">
+        pay_one,
+      </if>
+      <if test="paySec != null">
+        pay_sec,
+      </if>
+      <if test="payThr != null">
+        pay_thr,
+      </if>
+      <if test="image != null">
+        image,
+      </if>
+      <if test="createAt != null">
+        create_at,
+      </if>
+      <if test="updateAt != null">
+        update_at,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="direction != null">
+        #{direction,jdbcType=VARCHAR},
+      </if>
+      <if test="jobName != null">
+        #{jobName,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null">
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="threshold != null">
+        #{threshold,jdbcType=TINYINT},
+      </if>
+      <if test="difficult != null">
+        #{difficult,jdbcType=TINYINT},
+      </if>
+      <if test="growth != null">
+        #{growth,jdbcType=BIGINT},
+      </if>
+      <if test="demand != null">
+        #{demand,jdbcType=BIGINT},
+      </if>
+      <if test="payOne != null">
+        #{payOne,jdbcType=VARCHAR},
+      </if>
+      <if test="paySec != null">
+        #{paySec,jdbcType=VARCHAR},
+      </if>
+      <if test="payThr != null">
+        #{payThr,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="createAt != null">
+        #{createAt,jdbcType=BIGINT},
+      </if>
+      <if test="updateAt != null">
+        #{updateAt,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jnshu.pojo.Job">
+    update job
+    <set>
+      <if test="direction != null">
+        direction = #{direction,jdbcType=VARCHAR},
+      </if>
+      <if test="jobName != null">
+        job_name = #{jobName,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null">
+        introduction = #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="threshold != null">
+        threshold = #{threshold,jdbcType=TINYINT},
+      </if>
+      <if test="difficult != null">
+        difficult = #{difficult,jdbcType=TINYINT},
+      </if>
+      <if test="growth != null">
+        growth = #{growth,jdbcType=BIGINT},
+      </if>
+      <if test="demand != null">
+        demand = #{demand,jdbcType=BIGINT},
+      </if>
+      <if test="payOne != null">
+        pay_one = #{payOne,jdbcType=VARCHAR},
+      </if>
+      <if test="paySec != null">
+        pay_sec = #{paySec,jdbcType=VARCHAR},
+      </if>
+      <if test="payThr != null">
+        pay_thr = #{payThr,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        image = #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="createAt != null">
+        create_at = #{createAt,jdbcType=BIGINT},
+      </if>
+      <if test="updateAt != null">
+        update_at = #{updateAt,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jnshu.pojo.Job">
+    update job
+    set direction = #{direction,jdbcType=VARCHAR},
+      job_name = #{jobName,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      introduction = #{introduction,jdbcType=VARCHAR},
+      threshold = #{threshold,jdbcType=TINYINT},
+      difficult = #{difficult,jdbcType=TINYINT},
+      growth = #{growth,jdbcType=BIGINT},
+      demand = #{demand,jdbcType=BIGINT},
+      pay_one = #{payOne,jdbcType=VARCHAR},
+      pay_sec = #{paySec,jdbcType=VARCHAR},
+      pay_thr = #{payThr,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      create_at = #{createAt,jdbcType=BIGINT},
+      update_at = #{updateAt,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
