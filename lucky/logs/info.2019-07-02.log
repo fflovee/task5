@@ -1,0 +1,44 @@
+2019-07-02 15:43:12,791 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - Starting LuckyApplicationTests on DESKTOP-S0O45GG with PID 15392 (started by 59200 in E:\IdeaProjects\lucky)
+2019-07-02 15:43:12,793 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - No active profile set, falling back to default profiles: default
+2019-07-02 15:43:14,836 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-02 15:43:15,229 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - Started LuckyApplicationTests in 2.944 seconds (JVM running for 3.926)
+2019-07-02 15:43:15,556 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-02 15:43:17,055 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-02 15:43:17,105 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-02 15:43:17,105 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-02 15:43:17,109 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-02 15:43:35,306 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - Starting LuckyApplicationTests on DESKTOP-S0O45GG with PID 15672 (started by 59200 in E:\IdeaProjects\lucky)
+2019-07-02 15:43:35,307 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - No active profile set, falling back to default profiles: default
+2019-07-02 15:43:36,734 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-02 15:43:37,006 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - Started LuckyApplicationTests in 2.09 seconds (JVM running for 2.795)
+2019-07-02 15:43:37,164 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-02 15:43:38,729 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-02 15:43:38,772 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-02 15:43:38,773 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-02 15:43:38,776 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-02 23:23:40,111 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - Starting LuckyApplicationTests on DESKTOP-S0O45GG with PID 16108 (started by 59200 in E:\IdeaProjects\lucky)
+2019-07-02 23:23:40,112 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - No active profile set, falling back to default profiles: default
+2019-07-02 23:23:41,576 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-02 23:23:41,860 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - Started LuckyApplicationTests in 2.117 seconds (JVM running for 2.853)
+2019-07-02 23:23:42,002 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-02 23:23:43,542 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-02 23:23:43,615 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-02 23:23:43,616 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-02 23:23:43,619 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-02 23:24:07,978 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - Starting LuckyApplicationTests on DESKTOP-S0O45GG with PID 17528 (started by 59200 in E:\IdeaProjects\lucky)
+2019-07-02 23:24:07,979 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - No active profile set, falling back to default profiles: default
+2019-07-02 23:24:09,447 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-02 23:24:09,728 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - Started LuckyApplicationTests in 2.093 seconds (JVM running for 2.771)
+2019-07-02 23:24:09,867 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-02 23:24:11,405 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-02 23:24:11,459 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-02 23:24:11,460 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-02 23:24:11,463 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-02 23:34:01,097 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - Starting LuckyApplicationTests on DESKTOP-S0O45GG with PID 9864 (started by 59200 in E:\IdeaProjects\lucky)
+2019-07-02 23:34:01,098 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - No active profile set, falling back to default profiles: default
+2019-07-02 23:34:02,055 [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2019-07-02 23:34:03,797 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-07-02 23:34:04,292 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-02 23:34:04,612 [main] INFO  com.jnshu.lucky.LuckyApplicationTests - Started LuckyApplicationTests in 3.963 seconds (JVM running for 4.663)
+2019-07-02 23:34:04,817 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-02 23:34:04,820 [Thread-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
