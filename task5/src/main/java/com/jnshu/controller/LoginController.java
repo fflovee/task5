@@ -125,7 +125,7 @@ public class LoginController {
                 mav.setViewName("register");
                 return mav;
             }
-            String passwordMd5 = MD5Util.md5Hex(password);
+            String passwordMd5 = MD5Util.getSaltMD5(password);
             User user = new User();
             user.setName(username);
             user.setPassword(passwordMd5);
