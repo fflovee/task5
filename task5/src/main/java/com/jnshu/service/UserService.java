@@ -6,12 +6,10 @@ public interface UserService {
 
     User selectByPrimaryKey(Long id);
 
-    User selectMailInDb(String mail);
+    User selectUserNameInDb(String name);
 
-    User selectNameInDb(String name);
+    User selectByMobileEmail(String mobile,String email);
 
     int insertSelective(User record);
-
-    int selectUser(String name);
 
 }

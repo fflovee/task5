@@ -776,7 +776,8 @@ table {
   left: 0;
   height: 31.2989vw;
   width: 100vw;
-  background-image: url(/view/image/task14.1/css_sprites.png);
+  background-image: url(https://hp21310.oss-cn-shanghai.aliyuncs.com/css_sprites_1563286316750.png);
+  /*background-image: url(/view/image/task14.1/css_sprites.png);*/
   background-size: 400vw 31.2989vw;
   background-position: 0 0;
   z-index: -2;

@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.jnshu.pojo.User">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="qq" jdbcType="BIGINT" property="qq" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
     <result column="job" jdbcType="VARCHAR" property="job" />
     <result column="daily" jdbcType="VARCHAR" property="daily" />
     <result column="email" jdbcType="VARCHAR" property="email" />
@@ -40,11 +40,20 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, qq, job, daily, email, password
+    id, name, mobile, job, daily, email, password
   </sql>
 
-  <select id="selectUserName" resultType="com.jnshu.pojo.User">
-    select <include refid="Base_Column_List" /> from user where name = #{name}
+  <!--查询sql-->
+  <select id="selectByMobilEmail" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" />
+    from user
+    where
+    <if test="email != null">
+      email = #{email,jdbcType=VARCHAR}
+    </if>
+    <if test="mobile != null">
+      mobile = #{mobile,jdbcType=VARCHAR}
+    </if>
   </select>
 
   <select id="selectByExample" parameterType="com.jnshu.pojo.UserExample" resultMap="BaseResultMap">
@@ -70,7 +79,7 @@
     where id = #{id,jdbcType=BIGINT}
   </select>
 
-  <select id="selectUser" resultType="java.lang.Integer">
+  <select id="selectUser" resultType="com.jnshu.pojo.User">
     select
     count(*)
     from user where name = #{name}
@@ -82,10 +91,10 @@
   </delete>
 
   <insert id="insert" parameterType="com.jnshu.pojo.User">
-    insert into user (id, name, qq, job, 
+    insert into user (id, name, mobile, job,
       daily, email, password
       )
-    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{qq,jdbcType=BIGINT}, #{job,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{mobile,jdbcType=BIGINT}, #{job,jdbcType=VARCHAR},
       #{daily,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
       )
   </insert>
@@ -99,8 +108,8 @@
       <if test="name != null">
         name,
       </if>
-      <if test="qq != null">
-        qq,
+      <if test="mobile != null">
+        mobile,
       </if>
       <if test="job != null">
         job,
@@ -122,8 +131,8 @@
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="qq != null">
-        #{qq,jdbcType=BIGINT},
+      <if test="mobile != null">
+        #{mobile,jdbcType=BIGINT},
       </if>
       <if test="job != null">
         #{job,jdbcType=VARCHAR},
@@ -139,14 +148,15 @@
       </if>
     </trim>
   </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.jnshu.pojo.User">
     update user
     <set>
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="qq != null">
-        qq = #{qq,jdbcType=BIGINT},
+      <if test="mobile != null">
+        mobile = #{mobile,jdbcType=BIGINT},
       </if>
       <if test="job != null">
         job = #{job,jdbcType=VARCHAR},
@@ -166,7 +176,7 @@
   <update id="updateByPrimaryKey" parameterType="com.jnshu.pojo.User">
     update user
     set name = #{name,jdbcType=VARCHAR},
-      qq = #{qq,jdbcType=BIGINT},
+      mobile = #{mobile,jdbcType=BIGINT},
       job = #{job,jdbcType=VARCHAR},
       daily = #{daily,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},

@@ -23,6 +23,12 @@
         <put-attribute name="body" value="/WEB-INF/jsp/body/job.jsp"/>
     </definition>
 
+    <!--上传-->
+    <definition name="upload" extends="baseTemplate">
+        <put-attribute name="head" value="/WEB-INF/head_job.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/body/upload.jsp"/>
+    </definition>
+
     <!--大厅-->
     <definition name="vip" extends="baseTemplate">
         <put-attribute name="head" value="/WEB-INF/head_ex.jsp"/>
@@ -37,6 +43,12 @@
     </definition>
 
     <!--注册-->
+    <definition name="register2" extends="baseTemplate">
+        <put-attribute name="head" value="/WEB-INF/head_job.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/body/register2.jsp"/>
+    </definition>
+
+    <!--注册验证-->
     <definition name="register" extends="baseTemplate">
         <put-attribute name="head" value="/WEB-INF/head_job.jsp"/>
         <put-attribute name="body" value="/WEB-INF/jsp/body/register.jsp"/>

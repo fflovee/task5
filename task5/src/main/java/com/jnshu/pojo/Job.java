@@ -1,6 +1,9 @@
 package com.jnshu.pojo;
 
-public class Job {
+import java.io.Serializable;
+
+public class Job implements Serializable {
+    private static final long serialVersionUID = -5157582803108672273L;
     private Integer id;
 
     private String direction;

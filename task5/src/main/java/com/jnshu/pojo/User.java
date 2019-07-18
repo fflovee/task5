@@ -1,11 +1,14 @@
 package com.jnshu.pojo;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
+    private static final long serialVersionUID = -2794985906897669351L;
     private Long id;
 
     private String name;
 
-    private Long qq;
+    private String mobile;
 
     private String job;
 
@@ -31,12 +34,12 @@ public class User {
         this.name = name;
     }
 
-    public Long getQq() {
-        return qq;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setQq(Long qq) {
-        this.qq = qq;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getJob() {
@@ -76,7 +79,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", qq=" + qq +
+                ", mobile=" + mobile +
                 ", job='" + job + '\'' +
                 ", daily='" + daily + '\'' +
                 ", email='" + email + '\'' +

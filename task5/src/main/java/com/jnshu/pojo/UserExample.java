@@ -234,63 +234,63 @@ public class UserExample {
             return (Criteria) this;
         }
 
-        public Criteria andQqIsNull() {
-            addCriterion("qq is null");
+        public Criteria andMobileIsNull() {
+            addCriterion("mobile is null");
             return (Criteria) this;
         }
 
-        public Criteria andQqIsNotNull() {
-            addCriterion("qq is not null");
+        public Criteria andMobileIsNotNull() {
+            addCriterion("mobile is not null");
             return (Criteria) this;
         }
 
-        public Criteria andQqEqualTo(Long value) {
-            addCriterion("qq =", value, "qq");
+        public Criteria andMobileEqualTo(Long value) {
+            addCriterion("mobile =", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andQqNotEqualTo(Long value) {
-            addCriterion("qq <>", value, "qq");
+        public Criteria andMobileNotEqualTo(Long value) {
+            addCriterion("mobile <>", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andQqGreaterThan(Long value) {
-            addCriterion("qq >", value, "qq");
+        public Criteria andMobileGreaterThan(Long value) {
+            addCriterion("mobile >", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andQqGreaterThanOrEqualTo(Long value) {
-            addCriterion("qq >=", value, "qq");
+        public Criteria andMobileGreaterThanOrEqualTo(Long value) {
+            addCriterion("mobile >=", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andQqLessThan(Long value) {
-            addCriterion("qq <", value, "qq");
+        public Criteria andMobileLessThan(Long value) {
+            addCriterion("mobile <", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andQqLessThanOrEqualTo(Long value) {
-            addCriterion("qq <=", value, "qq");
+        public Criteria andMobileLessThanOrEqualTo(Long value) {
+            addCriterion("mobile <=", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andQqIn(List<Long> values) {
-            addCriterion("qq in", values, "qq");
+        public Criteria andMobileIn(List<Long> values) {
+            addCriterion("mobile in", values, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andQqNotIn(List<Long> values) {
-            addCriterion("qq not in", values, "qq");
+        public Criteria andMobileNotIn(List<Long> values) {
+            addCriterion("mobile not in", values, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andQqBetween(Long value1, Long value2) {
-            addCriterion("qq between", value1, value2, "qq");
+        public Criteria andMobileBetween(Long value1, Long value2) {
+            addCriterion("mobile between", value1, value2, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andQqNotBetween(Long value1, Long value2) {
-            addCriterion("qq not between", value1, value2, "qq");
+        public Criteria andMobileNotBetween(Long value1, Long value2) {
+            addCriterion("mobile not between", value1, value2, "mobile");
             return (Criteria) this;
         }
 

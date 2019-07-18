@@ -700,7 +700,7 @@
         <form action="/a/login" method="post">
             <h2 style="color: #29b078;margin: 10px 10px;text-align: center">用户登陆</h2>
             <div style="margin-bottom: 20px;margin-top: 20px">
-                <input style="height: 50px;width: 250px;font-size: large" type="text" name="username" placeholder="请输入用户名">
+                <input style="height: 50px;width: 250px;font-size: large" type="text" name="phoneNum" placeholder="请输入注册手机或邮箱">
             </div>
             <div style="margin-bottom: 20px">
                 <input style="height: 50px;width: 250px;font-size: large" type="password" name="password" placeholder="请输入登陆密码">

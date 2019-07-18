@@ -28,9 +28,11 @@ public class JobController {
 
     @RequestMapping(value = "/a/job", method = RequestMethod.GET)
     public ModelAndView jobList(HttpServletRequest request) {
+
         ModelAndView mav = new ModelAndView("job");
         String name = (null != CookieUtil.isLogin(request) ? CookieUtil.isLogin(request) : null);
         mav.addObject("name", name);
+
         JobExample job1 = new JobExample();
         JobExample.Criteria c1 = job1.createCriteria();
         c1.andDirectionEqualTo("java前端工程师");

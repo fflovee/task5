@@ -8,6 +8,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
+import java.util.Map;
 
 /**
  * @ClassName JWTUtil 加密工具
@@ -96,6 +97,27 @@ public class JWTUtil {
             return MAPPER.writeValueAsString(subObj);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static String sign(Map<String, Object> payload, String key) {
+        // Token默认过期时间10分钟(默认毫秒)
+        Date expiration = new Date(System.currentTimeMillis() + 6000 * 1000);
+        return Jwts.builder()
+                .setClaims(payload)
+                .setExpiration(expiration)
+                .signWith(SignatureAlgorithm.HS256, key.getBytes())
+                .compact();
+    }
+
+    public static Map verify(String token, String key) {
+        try {
+            return Jwts.parser()
+                    .setSigningKey(key.getBytes())
+                    .parseClaimsJws(token)
+                    .getBody();
+        } catch (Exception e) {
             return null;
         }
     }

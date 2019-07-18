@@ -1,9 +1,12 @@
 package com.jnshu.pojo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JobExample {
+public class JobExample implements Serializable {
+
+    private static final long serialVersionUID = 5448646253618233816L;
     protected String orderByClause;
 
     protected boolean distinct;
@@ -63,8 +66,9 @@ public class JobExample {
         distinct = false;
     }
 
-    protected abstract static class GeneratedCriteria {
+    protected abstract static class GeneratedCriteria implements Serializable {
         protected List<Criterion> criteria;
+        private static final long serialVersionUID = 3580439621230051654L;
 
         protected GeneratedCriteria() {
             super();

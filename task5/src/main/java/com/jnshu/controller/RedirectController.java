@@ -1,10 +1,14 @@
 package com.jnshu.controller;
 
 import com.jnshu.pojo.Job;
+import com.jnshu.redis.RedisUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *@ClassName JobController
@@ -33,17 +37,16 @@ public class RedirectController {
     public String toRecommend(Model model) {
         model.addAttribute("qqq","qqq");
         return "company";
-    }*/
+    }
 
-/*    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String toLogin(Model model) {
         model.addAttribute("qqq","qqq");
         return "login";
-    }
+    }*/
 
-    @RequestMapping(value = "/register",method = RequestMethod.GET)
+/*    @RequestMapping(value = "/a/register",method = RequestMethod.GET)
     public String toRegister() {
-//        model.addAttribute("register");
         return "register";
     }*/
 
@@ -51,5 +54,4 @@ public class RedirectController {
     public String toVip() {
         return "vip";
     }*/
-
 }

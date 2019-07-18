@@ -1,6 +1,9 @@
 package com.jnshu.pojo;
 
-public class Company {
+import java.io.Serializable;
+
+public class Company implements Serializable {
+    private static final long serialVersionUID = 8181572157921546426L;
     private Long id;
 
     private String companyName;
@@ -14,6 +17,19 @@ public class Company {
     private Long createAt;
 
     private Long updateAt;
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "id=" + id +
+                ", companyName='" + companyName + '\'' +
+                ", image='" + image + '\'' +
+                ", introduction='" + introduction + '\'' +
+                ", history='" + history + '\'' +
+                ", createAt=" + createAt +
+                ", updateAt=" + updateAt +
+                '}';
+    }
 
     public Long getId() {
         return id;

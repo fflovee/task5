@@ -2,14 +2,16 @@ package com.jnshu.dao;
 
 import com.jnshu.pojo.User;
 import com.jnshu.pojo.UserExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface UserMapper {
 
-    int selectUser(String name);
+    User selectUser(String name);
 
-    User selectUserName(String name);
+    User selectByMobilEmail(@Param("mobile") String mobile,
+                            @Param("email") String email);
 
     int deleteByPrimaryKey(Long id);
 
